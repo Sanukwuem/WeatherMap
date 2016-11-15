@@ -36,11 +36,8 @@ public class MapsActivity extends FragmentActivity {
     private TextView cityText;
     private TextView condDescr;
     private TextView temp;
-    private TextView press;
-    private TextView windSpeed;
-    private TextView windDeg;
 
-    private TextView hum;
+
     private ImageView imgView;
 
     @Override
@@ -49,15 +46,12 @@ public class MapsActivity extends FragmentActivity {
         setContentView(R.layout.activity_maps);
 
         setContentView(R.layout.activity_maps);
-        String city = "Rome,IT";
+        String city = "NewJersey,US";
 
         cityText = (TextView) findViewById(R.id.cityText);
         condDescr = (TextView) findViewById(R.id.condDescr);
         temp = (TextView) findViewById(R.id.temp);
-        hum = (TextView) findViewById(R.id.hum);
-        press = (TextView) findViewById(R.id.press);
-        windSpeed = (TextView) findViewById(R.id.windSpeed);
-        windDeg = (TextView) findViewById(R.id.windDeg);
+
         imgView = (ImageView) findViewById(R.id.condIcon);
 
         JSONWeatherTask task = new JSONWeatherTask();
@@ -112,11 +106,7 @@ public class MapsActivity extends FragmentActivity {
 
             cityText.setText(weather.location.getCity() + "," + weather.location.getCountry());
             condDescr.setText(weather.currentCondition.getCondition() + "(" + weather.currentCondition.getDescr() + ")");
-            temp.setText("" + Math.round((weather.temperature.getTemp() - 273.15)) + "�C");
-            hum.setText("" + weather.currentCondition.getHumidity() + "%");
-            press.setText("" + weather.currentCondition.getPressure() + " hPa");
-            windSpeed.setText("" + weather.wind.getSpeed() + " mps");
-            windDeg.setText("" + weather.wind.getDeg() + "�");
+            temp.setText("" + Math.round((weather.temperature.getTemp() - 273.15)) + "C°�");
 
         }
 

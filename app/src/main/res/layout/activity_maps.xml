@@ -8,13 +8,13 @@
     android:layout_height="wrap_content">
 
     <EditText
-        android:layout_width="294dp"
+        android:layout_width="269dp"
         android:layout_height="wrap_content"
         android:id="@+id/editText" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="91dp"
         android:layout_height="wrap_content"
         android:text="Search"
         android:id="@+id/button"
@@ -30,7 +30,7 @@
     android:id="@+id/map"
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="386dp"
-    android:layout_height="485dp"
+    android:layout_height="515dp"
     tools:context="com.example.sean.homework_3.MapsActivity" />
 
 </LinearLayout>
